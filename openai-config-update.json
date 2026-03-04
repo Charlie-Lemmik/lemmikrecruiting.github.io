@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.15",
+    "lastTouchedAt": "2026-02-18T13:40:37.794Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-17T14:23:41.929Z",
+    "lastRunVersion": "2026.2.15",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "executablePath": "/snap/bin/chromium",
+    "headless": true,
+    "noSandbox": true,
+    "attachOnly": true
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "openai:default": {
+        "provider": "openai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-20250514"
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-20250514": {
+          "alias": "Claude",
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "openai/gpt-4o": {
+          "alias": "GPT-4o",
+          "params": {
+            "temperature": 0.7
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "alias": "GPT-4o-mini",
+          "params": {
+            "temperature": 0.7
+          }
+        },
+        "openai/gpt-3.5-turbo": {
+          "alias": "GPT-3.5-turbo",
+          "params": {
+            "temperature": 0.7
+          }
+        }
+      },
+      "workspace": "/home/charl/.openclaw/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "30m"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "name": "main",
+        "workspace": "/home/charl/.openclaw/workspace",
+        "agentDir": "/home/charl/.openclaw/agents/main/agent",
+        "model": "anthropic/claude-sonnet-4-20250514"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "apiKey": "__OPENCLAW_REDACTED__"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "openai": {
+      "whisper": {
+        "enabled": true,
+        "model": "whisper-1"
+      },
+      "images": {
+        "enabled": true,
+        "model": "dall-e-3"
+      },
+      "tts": {
+        "enabled": true,
+        "model": "tts-1",
+        "voice": "nova"
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "command-logger": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "name": "MyOpenClaw",
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "__OPENCLAW_REDACTED__",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "password",
+      "password": "__OPENCLAW_REDACTED__"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}
