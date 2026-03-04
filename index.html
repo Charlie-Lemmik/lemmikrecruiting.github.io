@@ -19,17 +19,16 @@
         body { font-family: 'Roboto', sans-serif; }
         h1, h2, h3, h4, .btn-font { font-family: 'Montserrat', sans-serif; }
         
-        /* Custom Colors from Design */
-        .bg-navy-header { background-color: #0f172a; } /* Dark Navy */
-        .text-navy-header { color: #0f172a; }
-        .bg-btn-orange { background-color: #d97706; } /* Safety Orange/Bronze */
+        /* Custom Colors */
+        .text-lemmik-blue { color: #2c7be5; } /* Matching the Logo Blue */
+        .bg-btn-orange { background-color: #d97706; }
         .hover-btn-orange:hover { background-color: #b45309; }
-        .bg-btn-blue { background-color: #0284c7; } /* Sky Blue */
+        .bg-btn-blue { background-color: #0284c7; }
         .hover-btn-blue:hover { background-color: #0369a1; }
         
         .hero-section {
-            /* Blend of Construction Site and Corporate Meeting */
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.6)), url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2000&auto=format&fit=crop');
+            /* High-end Construction/Corporate Blend */
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -37,29 +36,27 @@
 </head>
 <body class="bg-gray-50 text-slate-800">
 
-    <!-- Header / Navbar -->
-    <nav class="bg-navy-header text-white py-4 fixed w-full top-0 z-50 shadow-lg">
+    <!-- Header / Navbar (WHITE BACKGROUND to match Logo) -->
+    <nav class="bg-white py-4 fixed w-full top-0 z-50 shadow-md">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo Area -->
-            <a href="#" class="flex items-center gap-3">
-                <div class="bg-white p-1 rounded-md">
-                    <img src="lemmik_logo_final.jpg" alt="Lemmik Logo" class="h-8 w-auto">
-                </div>
-                <span class="text-2xl font-bold tracking-tight uppercase">Lemmik</span>
+            <a href="#" class="flex items-center gap-2">
+                <!-- Logo blends perfectly on white -->
+                <img src="lemmik_logo_final.jpg" alt="Lemmik Logo" class="h-12 w-auto object-contain">
             </a>
             
-            <!-- Links -->
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
-                <a href="#" class="hover:text-white transition">Home</a>
-                <a href="#platform" class="hover:text-white transition">Our Platform</a>
-                <a href="#focus" class="hover:text-white transition">Industry Focus</a>
-                <a href="#pricing" class="hover:text-white transition">Pricing</a>
-                <a href="#" class="hover:text-white transition">Resources</a>
+            <!-- Links (Dark Text) -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-bold text-slate-700 uppercase tracking-wide">
+                <a href="#" class="hover:text-blue-600 transition">Home</a>
+                <a href="#platform" class="hover:text-blue-600 transition">Our Platform</a>
+                <a href="#focus" class="hover:text-blue-600 transition">Industry Focus</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+                <a href="#" class="hover:text-blue-600 transition">Resources</a>
             </div>
 
             <!-- CTA Buttons -->
             <div class="flex items-center gap-4">
-                <a href="#" class="hidden md:block text-sm font-semibold hover:text-gray-300">Login</a>
+                <a href="#" class="hidden md:block text-sm font-semibold text-slate-600 hover:text-blue-600">Login</a>
                 <a href="#contact" class="bg-btn-orange text-white px-6 py-2.5 rounded hover-btn-orange transition font-bold shadow-md btn-font text-sm uppercase tracking-wide">
                     Post a Role
                 </a>
@@ -68,112 +65,96 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section h-[600px] flex items-center justify-center mt-16 text-center text-white px-4">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">
-                Find Construction Leaders. <span class="text-orange-400">Fast.</span>
-            </h1>
-            <p class="text-xl md:text-2xl font-medium mb-10 text-gray-200 uppercase tracking-wider">
-                Fully Automated Executive Search for Construction.<br>
-                <span class="bg-white/10 px-2 py-1 rounded inline-block mt-2 font-bold text-white border border-white/20">Flat $5,000 Fee.</span>
-            </p>
+    <header class="hero-section h-[700px] flex items-center mt-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
             
-            <a href="#contact" class="bg-btn-blue text-white text-lg px-10 py-4 rounded-full font-bold hover-btn-blue transition shadow-xl inline-flex items-center gap-3 transform hover:scale-105 duration-200">
-                <i class="fas fa-rocket"></i> Launch Your Search
-            </a>
+            <!-- Left Text Content -->
+            <div class="md:w-3/5 text-white z-10 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-xl">
+                    Find Construction Leaders. <span class="text-orange-400">Fast.</span>
+                </h1>
+                <div class="w-24 h-2 bg-orange-500 mb-8 mx-auto md:mx-0"></div>
+                
+                <p class="text-xl md:text-2xl font-light mb-8 text-gray-100 uppercase tracking-wider max-w-2xl">
+                    Fully Automated Executive Search.<br>
+                    <span class="font-bold text-white">Flat $5,000 Fee.</span>
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-white text-slate-900 text-lg px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-xl inline-flex items-center gap-3">
+                        <img src="lemmik_logo_final.jpg" alt="Icon" class="h-6 w-auto"> Launch Your Search
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right: Optional Visual Space (Kept clear for background image impact) -->
         </div>
     </header>
 
     <!-- The Lemmik Difference Section -->
-    <section id="platform" class="py-20 bg-white">
+    <section id="platform" class="py-24 bg-white relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 
-                <!-- Left: Big Logo Graphic -->
-                <div class="lg:w-1/3 flex flex-col items-center text-center">
-                    <img src="lemmik_logo_final.jpg" alt="Lemmik Robot" class="h-64 w-auto opacity-90 mix-blend-multiply mb-6">
-                    <h2 class="text-3xl font-extrabold text-navy-header">The LEMMIK<br>Difference</h2>
+                <!-- Left: Giant Robot Logo Watermark -->
+                <div class="lg:w-1/3 flex justify-center">
+                    <img src="lemmik_logo_final.jpg" alt="Lemmik Robot" class="h-80 w-auto opacity-100"> 
                 </div>
 
-                <!-- Right: 3 Features Grid -->
-                <div class="lg:w-2/3 grid md:grid-cols-3 gap-8">
+                <!-- Right: Content -->
+                <div class="lg:w-2/3">
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-2">The LEMMIK Difference</h2>
+                    <div class="w-16 h-1.5 bg-blue-600 mb-10"></div>
                     
-                    <!-- Feature 1: AI -->
-                    <div class="text-center p-6 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
-                        <div class="text-btn-blue text-5xl mb-4"><i class="fas fa-microchip"></i></div>
-                        <h3 class="font-bold text-lg mb-2 uppercase text-slate-900">AI-Powered Matching</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Our algorithm sources the top 1% of passive and active construction talent instantly.
-                        </p>
-                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div class="text-center">
+                            <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-microchip"></i></div>
+                            <h3 class="font-bold text-lg mb-2 uppercase text-slate-900">AI-Powered Matching</h3>
+                            <p class="text-sm text-slate-600">
+                                Our algorithm sources the top 1% of passive construction talent instantly.
+                            </p>
+                        </div>
 
-                    <!-- Feature 2: Industry Focus -->
-                    <div class="text-center p-6 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
-                        <div class="text-orange-600 text-5xl mb-4"><i class="fas fa-hard-hat"></i></div>
-                        <h3 class="font-bold text-lg mb-2 uppercase text-slate-900">Construction Industry Focus</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Deep knowledge of Project Management, Engineering, and C-Suite roles.
-                        </p>
-                    </div>
+                        <!-- Card 2 -->
+                        <div class="text-center">
+                            <div class="text-orange-600 text-5xl mb-4"><i class="fas fa-hard-hat"></i></div>
+                            <h3 class="font-bold text-lg mb-2 uppercase text-slate-900">Construction Focus</h3>
+                            <p class="text-sm text-slate-600">
+                                Deep knowledge of PM, Superintendent, and Estimating roles.
+                            </p>
+                        </div>
 
-                    <!-- Feature 3: Pricing -->
-                    <div class="text-center p-6 rounded-xl bg-slate-50 border border-slate-200 shadow-sm relative overflow-hidden">
-                        <div class="text-navy-header text-5xl font-black mb-1">$5,000</div>
-                        <h3 class="font-bold text-xs mb-2 uppercase text-slate-500 tracking-wider">Transparent, Flat Pricing</h3>
-                        <div class="w-12 h-1 bg-btn-orange mx-auto mb-3 rounded"></div>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            $5,000 per search, from Specialist to CEO. No contingency fees. No percentages.
-                        </p>
+                        <!-- Card 3 -->
+                        <div class="text-center">
+                            <div class="text-slate-800 text-5xl font-black mb-1">$5,000</div>
+                            <h3 class="font-bold text-lg mb-2 uppercase text-slate-900">Flat Pricing</h3>
+                            <p class="text-sm text-slate-600">
+                                Transparent fee. No percentages. No contingency surprises.
+                            </p>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Roles Section -->
+    <!-- Featured Roles -->
     <section id="focus" class="py-16 bg-gray-100 border-t border-gray-200">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold text-slate-700 mb-10">Featured Construction Roles</h3>
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-bold text-slate-800 mb-8 text-center">Featured Construction Roles</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-sm font-semibold text-slate-800 hover:shadow-md transition cursor-pointer">Project Director</div>
-                <div class="bg-white p-6 rounded-lg shadow-sm font-semibold text-slate-800 hover:shadow-md transition cursor-pointer">VP of Operations</div>
-                <div class="bg-white p-6 rounded-lg shadow-sm font-semibold text-slate-800 hover:shadow-md transition cursor-pointer">Chief Estimator</div>
-                <div class="bg-white p-6 rounded-lg shadow-sm font-semibold text-slate-800 hover:shadow-md transition cursor-pointer">Sustainability Lead</div>
+                <div class="bg-white p-6 rounded shadow-sm text-center font-bold text-slate-700 hover:shadow-md transition">Project Director</div>
+                <div class="bg-white p-6 rounded shadow-sm text-center font-bold text-slate-700 hover:shadow-md transition">VP of Operations</div>
+                <div class="bg-white p-6 rounded shadow-sm text-center font-bold text-slate-700 hover:shadow-md transition">Chief Estimator</div>
+                <div class="bg-white p-6 rounded shadow-sm text-center font-bold text-slate-700 hover:shadow-md transition">Sustainability Lead</div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form (Hidden Target for Buttons) -->
-    <section id="contact" class="py-24 bg-navy-header text-white">
-        <div class="container mx-auto px-6 max-w-3xl text-center">
-            <h2 class="text-4xl font-bold mb-6">Start Your Search Today.</h2>
-            <p class="text-lg text-gray-400 mb-12">Tell us about the role. We'll find the candidate.</p>
-            
-            <form action="https://formspree.io/f/mqkrvbvo" method="POST" class="bg-white text-slate-900 p-8 rounded-xl shadow-2xl text-left">
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-bold mb-2">Name</label>
-                        <input type="text" name="name" class="w-full bg-gray-100 border rounded p-3" placeholder="Jane Doe">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">Email</label>
-                        <input type="email" name="email" class="w-full bg-gray-100 border rounded p-3" placeholder="jane@company.com">
-                    </div>
-                </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-bold mb-2">Job Role Details</label>
-                    <textarea name="message" rows="4" class="w-full bg-gray-100 border rounded p-3" placeholder="We are looking for a Senior PM..."></textarea>
-                </div>
-                <button type="submit" class="w-full bg-btn-orange text-white font-bold py-4 rounded hover-btn-orange transition text-lg uppercase">
-                    Submit Job Order ($5k Flat)
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-500 py-8 text-center text-sm">
-        <p>&copy; 2026 Lemmik Recruiting. Contact: <a href="mailto:executivesearchfirmguy@gmail.com" class="text-gray-300 hover:text-white">executivesearchfirmguy@gmail.com</a></p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-sm">
+        <p>&copy; 2026 Lemmik Recruiting. Contact: <a href="mailto:executivesearchfirmguy@gmail.com" class="text-gray-200 hover:underline">executivesearchfirmguy@gmail.com</a></p>
     </footer>
 
 </body>
