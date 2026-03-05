@@ -1,0 +1,30 @@
+CANDIDATES SAMPLE DATA:
+ID,First Name,Last Name,Email,Phone,LinkedIn,Current Company,Current Title,Years Experience,Construction Focus,Skills,Location,Open to Relocate?,Current Salary,Target Salary,Availability,Resume Link,Source,Quality Score,Status,Last Contact,Notes,Date Added
+C001,John,Smith,john.smith@email.com,(555) 123-4567,linkedin.com/in/johnsmith,ABC Construction,Project Manager,8,Commercial,"Scheduling, Budgeting, Team Leadership","Dallas, TX",Yes,$85000,$95000,Immediate,resume_link,LinkedIn,8.5,Active,2026-03-01,Strong PM with commercial experience,2026-03-01
+C002,Sarah,Johnson,sarah.j@email.com,(555) 234-5678,linkedin.com/in/sarahjohnson,XYZ Builders,Superintendent,12,Residential,"Quality Control, Safety, Scheduling","Austin, TX",No,$92000,$105000,2 weeks,resume_link,Referral,9.2,Active,2026-03-02,Excellent superintendent safety focused,2026-03-02
+C003,Mike,Davis,mike.davis@email.com,(555) 345-6789,linkedin.com/in/mikedavis,Premier Construction,Senior Estimator,15,Infrastructure,"Cost Analysis, Takeoffs, Bidding","Houston, TX",Yes,$98000,$115000,1 month,resume_link,ZoomInfo,9.0,Passive,2026-03-03,Top estimator looking for growth opportunity,2026-03-03
+
+CLIENTS SAMPLE DATA:
+Client ID,Company Name,Website,Industry Focus,Company Size,Primary Contact,Contact Title,Contact Email,Contact Phone,Secondary Contact,Secondary Email,Secondary Phone,Address,City,State,Relationship Status,Lead Source,Last Contact,Next Follow-up,Contract Signed?,Fee Agreement,Notes,Date Added
+CL001,BuildCorp Inc,buildcorp.com,Commercial Construction,250-500,Mike Wilson,VP Operations,mike.wilson@buildcorp.com,(555) 345-6789,Lisa Chen,lisa.chen@buildcorp.com,(555) 345-6790,123 Main St,Houston,TX,Active Client,Referral,2026-03-01,2026-03-15,Yes,$5000 flat fee,Great relationship multiple searches,2026-02-15
+CL002,Premier Construction,premierconstruction.com,Infrastructure,100-250,David Brown,Owner,david@premierconstruction.com,(555) 456-7890,,,,456 Oak Ave,Dallas,TX,Prospect,Cold Outreach,2026-03-03,2026-03-10,No,TBD,Initial interest shown,2026-03-03
+CL003,Texas Builders Group,texasbuilders.com,Residential,500+,Amanda Rodriguez,HR Director,amanda.r@texasbuilders.com,(555) 567-8901,John Martinez,john.m@texasbuilders.com,(555) 567-8902,789 Pine St,Austin,TX,Warm Lead,LinkedIn,2026-03-04,2026-03-08,No,Standard Terms,Looking for multiple hires,2026-03-04
+
+JOB_ORDERS SAMPLE DATA:
+Job ID,Client ID,Company Name,Position Title,Department,Employment Type,Location,Remote OK?,Salary Min,Salary Max,Bonus Structure,Benefits,Required Experience,Required Skills,Preferred Skills,Start Date,Urgency,Job Description,Candidates Submitted,Interviews,Offers,Status,Fee Amount,Date Created,Target Fill Date,Notes
+J001,CL001,BuildCorp Inc,Senior Project Manager,Operations,Full-time,"Houston, TX",No,90000,110000,10% annual bonus,"Full health, dental, 401k match",5+ years commercial PM,"Scheduling, Budgeting, P6",LEED certification preferred,2026-04-01,Standard,Seeking experienced PM for $50M mixed-use project...,2,1,0,Open,5000,2026-03-01,2026-03-30,High priority search
+J002,CL002,Premier Construction,Construction Superintendent,Field Operations,Full-time,"Dallas, TX",No,85000,100000,Performance bonuses,"Health, dental, truck allowance",8+ years superintendent,"Safety, Quality Control, Scheduling",Infrastructure experience,2026-04-15,Urgent,Lead large infrastructure project team...,1,0,0,Open,5000,2026-03-03,2026-03-20,Urgent need for infrastructure project
+J003,CL003,Texas Builders Group,Chief Estimator,Pre-Construction,Full-time,"Austin, TX",Hybrid,105000,125000,Profit sharing,"Full benefits, remote flexibility",10+ years estimating,"Cost Analysis, Takeoffs, Software",Residential portfolio experience,2026-05-01,Standard,Senior estimating role for growing residential division...,0,0,0,Open,5000,2026-03-04,2026-04-15,New client relationship
+
+PIPELINE SAMPLE DATA:
+Deal ID,Job ID,Company,Position,Stage,Candidate Name,Submitted Date,Interview Date,Feedback,Next Steps,Close Probability,Fee Amount,Expected Close Date,Status,Notes,Last Updated
+D001,J001,BuildCorp Inc,Senior Project Manager,Interview Scheduled,John Smith,2026-03-01,2026-03-05,Strong technical skills,Follow up post-interview,75%,5000,2026-03-15,Active,Great fit for role,2026-03-04
+D002,J001,BuildCorp Inc,Senior Project Manager,Submitted,Sarah Johnson,2026-03-02,,Reviewing resume,Schedule initial call,50%,5000,2026-03-20,Active,Backup candidate,2026-03-04
+D003,J002,Premier Construction,Construction Superintendent,Qualified,Mike Davis,2026-03-03,2026-03-06,Excellent background,Prepare for client meeting,85%,5000,2026-03-12,Active,Perfect match for infrastructure,2026-03-04
+
+COMMUNICATIONS SAMPLE DATA:
+Comm ID,Type,Contact Type,Contact ID,Contact Name,Company,Date/Time,Subject,Content/Notes,Follow-up Required?,Follow-up Date,Status,Created By
+CM001,Email,Candidate,C001,John Smith,ABC Construction,2026-03-01 10:30,PM opportunity at BuildCorp,Sent details about senior PM role waiting for response,Yes,2026-03-03,Sent,Charles Lemmik
+CM002,Phone,Client,CL001,Mike Wilson,BuildCorp Inc,2026-03-01 14:15,Initial job briefing,Discussed requirements and timeline for PM search,No,,Complete,Charles Lemmik
+CM003,LinkedIn,Candidate,C003,Mike Davis,Premier Construction,2026-03-03 09:00,Infrastructure estimating opportunity,Initial outreach about superintendent role,Yes,2026-03-05,Sent,Charles Lemmik
+CM004,Email,Client,CL002,David Brown,Premier Construction,2026-03-03 16:30,Follow up on search needs,Sent capabilities deck and fee structure,Yes,2026-03-10,Sent,Charles Lemmik

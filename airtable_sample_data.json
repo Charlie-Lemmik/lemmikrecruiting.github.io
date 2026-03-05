@@ -1,0 +1,91 @@
+{
+  "CANDIDATES": [
+    {
+      "Full Name": "John Smith",
+      "Email": "john.smith@email.com",
+      "Phone": "(555) 123-4567",
+      "LinkedIn": "https://linkedin.com/in/johnsmith",
+      "Current Company": "ABC Construction",
+      "Current Title": "Project Manager",
+      "Years Experience": 8,
+      "Construction Focus": "Commercial",
+      "Skills": [
+        "Project Management",
+        "Scheduling",
+        "Budgeting",
+        "Team Leadership"
+      ],
+      "Location": "Dallas, TX",
+      "Open to Relocate": true,
+      "Current Salary": 85000,
+      "Target Salary": 95000,
+      "Availability": "Immediate",
+      "Source": "LinkedIn Scraping",
+      "Quality Score": 8.5,
+      "Status": "Active",
+      "Last Contact": "2026-03-01",
+      "Notes": "Strong PM with commercial experience. Very interested in growth opportunities.",
+      "Tags": [
+        "Hot Lead",
+        "Top Performer"
+      ]
+    },
+    {
+      "Full Name": "Sarah Johnson",
+      "Email": "sarah.j@email.com",
+      "Phone": "(555) 234-5678",
+      "LinkedIn": "https://linkedin.com/in/sarahjohnson",
+      "Current Company": "XYZ Builders",
+      "Current Title": "Superintendent",
+      "Years Experience": 12,
+      "Construction Focus": "Residential",
+      "Skills": [
+        "Quality Control",
+        "Safety Management",
+        "Scheduling",
+        "OSHA 30"
+      ],
+      "Location": "Austin, TX",
+      "Open to Relocate": false,
+      "Current Salary": 92000,
+      "Target Salary": 105000,
+      "Availability": "2 weeks",
+      "Source": "Referral",
+      "Quality Score": 9.2,
+      "Status": "Active",
+      "Last Contact": "2026-03-02",
+      "Notes": "Excellent superintendent with strong safety focus. Not willing to relocate.",
+      "Tags": [
+        "Top Performer",
+        "Safety Expert"
+      ]
+    }
+  ],
+  "CLIENTS": [
+    {
+      "Company Name": "BuildCorp Inc",
+      "Website": "https://buildcorp.com",
+      "Industry Focus": [
+        "Commercial Construction",
+        "Design-Build"
+      ],
+      "Company Size": "250-500",
+      "Revenue Range": "$100-250M",
+      "Primary Contact": "Mike Wilson",
+      "Contact Title": "VP Operations",
+      "Contact Email": "mike.wilson@buildcorp.com",
+      "Contact Phone": "(555) 345-6789",
+      "Address": "123 Main St",
+      "City": "Houston",
+      "State": "TX",
+      "Relationship Status": "Active Client",
+      "Lead Source": "Referral",
+      "Last Contact": "2026-03-01",
+      "Next Follow-up": "2026-03-15",
+      "Contract Signed": true,
+      "Fee Agreement": "$5,000 Flat Fee",
+      "Client Health Score": 9,
+      "Notes": "Great relationship. Multiple successful searches. Always pays on time."
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+AIRTABLE FIELD QUICK REFERENCE
+
+=== CANDIDATES TABLE FIELDS ===
+Full Name (Single line text - Primary)
+Email (Email)
+Phone (Phone number)
+LinkedIn (URL)
+Current Company (Single line text)
+Current Title (Single line text)
+Years Experience (Number)
+Construction Focus (Single select)
+Skills (Multiple select)
+Location (Single line text)
+Open to Relocate (Checkbox)
+Current Salary (Currency)
+Target Salary (Currency)
+Availability (Single select)
+Resume (Attachment)
+Source (Single select)
+Quality Score (Number)
+Status (Single select)
+Last Contact (Date)
+Next Follow-up (Date)
+Notes (Long text)
+Tags (Multiple select)
+Job Orders (Link to another record → JOB_ORDERS)
+Communications (Link to another record → COMMUNICATIONS)
+Date Added (Created time)
+
+=== CLIENTS TABLE FIELDS ===
+Company Name (Single line text - Primary)
+Website (URL)
+Industry Focus (Multiple select)
+Company Size (Single select)
+Revenue Range (Single select)
+Primary Contact (Single line text)
+Contact Title (Single line text)
+Contact Email (Email)
+Contact Phone (Phone number)
+Address (Single line text)
+City (Single line text)
+State (Single select)
+Relationship Status (Single select)
+Lead Source (Single select)
+Last Contact (Date)
+Next Follow-up (Date)
+Contract Signed (Checkbox)
+Fee Agreement (Single select)
+Client Health Score (Number)
+Notes (Long text)
+Job Orders (Link to another record → JOB_ORDERS)
+Communications (Link to another record → COMMUNICATIONS)
+Date Added (Created time)
+
+=== JOB_ORDERS TABLE FIELDS ===
+Position Title (Single line text - Primary)
+Client (Link to another record → CLIENTS)
+Department (Single select)
+Employment Type (Single select)
+Location (Single line text)
+Remote OK (Checkbox)
+Salary Min (Currency)
+Salary Max (Currency)
+Bonus Structure (Single line text)
+Benefits (Long text)
+Required Experience (Long text)
+Required Skills (Multiple select)
+Preferred Skills (Long text)
+Start Date (Date)
+Urgency (Single select)
+Job Description (Long text)
+Candidates Submitted (Number)
+Interviews (Number)
+Offers (Number)
+Status (Single select)
+Fee Amount (Currency)
+Target Fill Date (Date)
+Priority (Single select)
+Notes (Long text)
+Pipeline Deals (Link to another record → PIPELINE)
+Date Created (Created time)
+
+=== PIPELINE TABLE FIELDS ===
+Deal Name (Formula: {Job Order} & ' - ' & {Candidate})
+Job Order (Link to another record → JOB_ORDERS)
+Candidate (Link to another record → CANDIDATES)
+Stage (Single select)
+Submitted Date (Date)
+Interview Date (Date)
+Client Feedback (Long text)
+Next Steps (Single line text)
+Close Probability (Single select)
+Fee Amount (Currency)
+Expected Close Date (Date)
+Weighted Value (Formula)
+Days in Stage (Formula: DATETIME_DIFF(TODAY(), {Last Updated}, 'days'))
+Status (Single select)
+Lost Reason (Single select)
+Notes (Long text)
+Communications (Link to another record → COMMUNICATIONS)
+Last Updated (Last modified time)
+
+=== COMMUNICATIONS TABLE FIELDS ===
+Subject (Single line text - Primary)
+Type (Single select)
+Direction (Single select)
+Contact Type (Single select)
+Candidate (Link to another record → CANDIDATES)
+Client (Link to another record → CLIENTS)
+Pipeline Deal (Link to another record → PIPELINE)
+Content (Long text)
+Outcome (Single select)
+Follow-up Required (Checkbox)
+Follow-up Date (Date)
+Priority (Single select)
+Created By (Single line text)
+Date Created (Created time)
+
+=== SINGLE SELECT OPTIONS ===
+
+Construction Focus: Commercial, Residential, Industrial, Infrastructure, Heavy Civil, Specialty, Mixed
+
+Skills (Multiple Select): Project Management, Scheduling, Budgeting, Estimating, Safety Management, Quality Control, Team Leadership, P6 Primavera, Procore, AutoCAD, BIM/Revit, OSHA 30, LEED Certified, PMP Certified
+
+Availability: Immediate, 2 weeks, 1 month, 2-3 months, Passive
+
+Source: LinkedIn Scraping, ZoomInfo, Company Website, Referral, Job Board, Cold Outreach, Networking
+
+Status (Candidates): New, Active, Passive, Interviewing, Placed, Inactive
+
+Tags (Multiple Select): Hot Lead, Top Performer, Executive Level, Seeking Growth, Underpaid, Remote OK, Travel OK, Security Clearance
+
+Relationship Status: Cold Lead, Warm Lead, Active Prospect, Active Client, Past Client, Inactive
+
+Pipeline Stage: New Lead, Qualified, Submitted, Phone Screen, Interview Scheduled, Interview Complete, Reference Check, Offer Pending, Offer Made, Offer Accepted, Placed, Lost
+
+Close Probability: 10%, 25%, 50%, 75%, 90%, 100%, 0% - Lost
+
+=== SAMPLE DATA FOR TESTING ===
+
+CANDIDATES:
+John Smith | john.smith@email.com | (555) 123-4567 | ABC Construction | Project Manager | 8 years | Commercial | Active | Dallas, TX
+
+Sarah Johnson | sarah.j@email.com | (555) 234-5678 | XYZ Builders | Superintendent | 12 years | Residential | Active | Austin, TX
+
+CLIENTS:
+BuildCorp Inc | buildcorp.com | Mike Wilson | VP Operations | mike.wilson@buildcorp.com | Active Client | Houston, TX
+
+JOB_ORDERS:
+Senior Project Manager | BuildCorp Inc | $90,000-$110,000 | Open | Houston, TX | $5,000 fee
