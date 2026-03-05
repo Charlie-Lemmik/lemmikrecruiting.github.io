@@ -57,3 +57,10 @@ secrets.txt
 # Temporary files
 *.tmp
 *.temp
+# Security - Never commit credentials
+credentials.json
+token.json
+*.secret
+*.key
+auth.json
+oauth.json
